@@ -1,0 +1,3 @@
+[submodule "src/lightspeed"]
+	path = src/lightspeed
+	url = https://github.com/devDucks/lightspeed.git

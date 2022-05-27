@@ -1,0 +1,23 @@
+[package]
+name = "lightspeed-astro"
+version = "0.6.2"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/devDucks/lightspeed/"
+readme = "README.md"
+description = "The new protocol for astronomical devices communication"
+
+[lib]
+name = "lightspeed_astro"
+path = "src/lib.rs"
+
+[dependencies]
+protobuf = "3.0"
+prost = "0.10"
+tonic = "0.7"
+
+[build-dependencies]
+protoc-bin-vendored = "3"
+protobuf-codegen = "3.0"
+protobuf = "3.0"
+tonic-build = "0.7"
