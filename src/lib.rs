@@ -1,26 +1,27 @@
 pub mod props {
-    include!("lightspeed.props.rs");
+    include!(concat!(env!("OUT_DIR"), "/lightspeed.props.rs"));
 }
 
 pub mod devices {
-    include!("lightspeed.devices.rs");
+    include!(concat!(env!("OUT_DIR"), "/lightspeed.devices.rs"));
     pub mod actions {
-        include!("lightspeed.devices.actions.rs");
+        include!(concat!(env!("OUT_DIR"), "/lightspeed.devices.actions.rs"));
     }
 }
 
 pub mod request {
-    include!("lightspeed.request.rs");
+    include!(concat!(env!("OUT_DIR"), "/lightspeed.request.rs"));
 }
 
 pub mod response {
-    include!("lightspeed.response.rs");
+    include!(concat!(env!("OUT_DIR"), "/lightspeed.response.rs"));
 }
 
 pub mod server {
-    include!("lightspeed.server.rs");
+    include!(concat!(env!("OUT_DIR"), "/lightspeed.server.rs"));
 }
 
 pub mod proto {
-    pub const FD_DESCRIPTOR_SET: &[u8] = include_bytes!("lightspeed.bin");
+    pub const FD_DESCRIPTOR_SET: &[u8] =
+        include_bytes!(concat!(env!("OUT_DIR"), "/lightspeed.bin"));
 }
